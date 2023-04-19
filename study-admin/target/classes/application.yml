@@ -1,0 +1,6 @@
+server:
+  port: 8065
+
+spring:
+  application:
+    name: study
