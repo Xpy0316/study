@@ -29,8 +29,15 @@ public class SimpleTest {
         testDomain.setType("0");
         testDomain.setMainTableId("8888");
 
-        Map<String, Object> stringObjectMap = client.doPost("http://127.0.0.1:8092/wp/createOrForbiddenAD", "", testDomain);
+        Map<String, Object> stringObjectMap = client.doPost("http://10.10.201.238:8092/wp/createOrForbiddenAD", "", testDomain);
         System.out.println(stringObjectMap);
+
+
+        Map map = new HashMap();
+        map.put("code","95ebd75b53314807b0b868f3a4802a80");
+        Map<String, Object> stringObjectMap2 = client.doGet("https://empauto.diezhi.net:8010/auto/system/userInfoByScanCode",map);
+        System.out.println(stringObjectMap2);
+
 
     }
 }

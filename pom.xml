@@ -10,6 +10,7 @@
     <modules>
         <module>study-common</module>
         <module>study-admin</module>
+        <module>study-test</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -91,6 +92,27 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+
+           <!-- <plugin>
+                <groupId>com.github.shalousun</groupId>
+                <artifactId>smart-doc-maven-plugin</artifactId>
+                <version>[最新版本]</version>
+                <configuration>
+                    &lt;!&ndash;指定生成文档使用的配置文件&ndash;&gt;
+                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        &lt;!&ndash;不需要在编译项目时自动生成文档可注释phase&ndash;&gt;
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>html</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
+
+
         </plugins>
     </build>
 
@@ -118,4 +140,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+
 </project>

@@ -51,7 +51,7 @@ public interface MyHttpClient {
      */
     @GET
     @Retry(intervalMs = 5000,maxRetries = 3)
-    Map<String,Object> doGet(@Url String url);
+    Map<String,Object> doGet(@Url String url,@QueryMap Map<String, Object> options);
 
     /**
      * 处理get请求 请求头->携带授权Authorization
